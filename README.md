@@ -81,6 +81,8 @@ For each significant design decision, record:
 - [x] Add a hybrid infrastructure reference design
 - [x] Add a resilience and disaster-recovery checklist
 - [x] Add an operational-readiness assessment
-- [ ] Add a synthetic infrastructure capacity-planning example
+- [x] Add a synthetic infrastructure capacity-planning example
+
+- [Synthetic capacity-planning example](docs/SYNTHETIC-CAPACITY-PLANNING.md)
 
 All examples are conceptual and synthetic. Validate designs against business requirements, vendor documentation and security governance before real-world use.
