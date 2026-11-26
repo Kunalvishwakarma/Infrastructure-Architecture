@@ -68,14 +68,19 @@ For each significant design decision, record:
 | Consequences | Benefits, risks and trade-offs |
 | Review trigger | What would cause this decision to be revisited |
 
+## Published architecture artefacts
+
+- [Hybrid infrastructure reference architecture](docs/HYBRID-REFERENCE-ARCHITECTURE.md)
+- [Architecture decision record template](docs/ADR-TEMPLATE.md)
+- [Resilience and disaster recovery checklist](docs/RESILIENCE-AND-DR-CHECKLIST.md)
+- [Operational readiness assessment](docs/OPERATIONAL-READINESS-ASSESSMENT.md)
+
 ## Roadmap
 
-- [ ] Publish architecture principles and an ADR template
-- [ ] Add a hybrid infrastructure reference design
-- [ ] Add a resilience and disaster-recovery checklist
-- [ ] Add an operational-readiness assessment
+- [x] Publish architecture principles and an ADR template
+- [x] Add a hybrid infrastructure reference design
+- [x] Add a resilience and disaster-recovery checklist
+- [x] Add an operational-readiness assessment
 - [ ] Add a synthetic infrastructure capacity-planning example
 
-## Safe publication
-
-Never publish customer names, internal topology, production IP addresses, tenant or subscription IDs, credentials, proprietary documents or unapproved project metrics. Use documentation IP ranges and synthetic names in examples.
+All examples are conceptual and synthetic. Validate designs against business requirements, vendor documentation and security governance before real-world use.
