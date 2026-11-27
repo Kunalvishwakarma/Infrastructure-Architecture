@@ -1,24 +1,24 @@
 # Infrastructure Architecture
 
-**Enterprise infrastructure | Hybrid cloud | Resilience | Security | Operations**
+**Enterprise infrastructure | Hybrid cloud | Resilience | Security | Operational design**
 
-A practical portfolio of reference architectures, architecture decision records and operational design patterns for enterprise IT infrastructure.
+I bring more than 20 years of enterprise IT experience across infrastructure architecture, datacenter services, networking and technology delivery. In professional roles, my work has involved understanding complex existing environments, coordinating infrastructure workstreams and supporting modernisation across on-premises, datacenter and hybrid-cloud platforms.
 
-> Scope: independent reference material and personal labs. All diagrams and examples use synthetic environments and are not representations of any employer or customer environment.
+This repository translates the architecture disciplines relevant to that work into reusable, publication-safe reference material. It is a professional portfolio of methods and design thinking—not a collection of customer production designs.
 
-## Focus areas
+## Professional perspective
 
-- Enterprise infrastructure architecture and platform lifecycle
-- Hybrid infrastructure and cloud integration
-- High availability, backup, disaster recovery and business continuity
-- Identity, privileged access and security-by-design
-- Network segmentation, DNS, load balancing and connectivity
-- Monitoring, observability, capacity and operational readiness
-- Architecture governance, technical debt and lifecycle planning
+The architecture work I value most connects design decisions to delivery and operations:
 
-## Reference architecture: resilient hybrid workload
+- **Start with the environment:** establish service ownership, dependencies, constraints, lifecycle and operational requirements before selecting a target design.
+- **Design for resilience:** consider failure domains, availability, backup, recovery objectives and tested restoration paths.
+- **Make security part of the design:** apply least privilege, identity controls, segmentation and auditable administration.
+- **Design for supportability:** include monitoring, alerting, runbooks, ownership, capacity and lifecycle from the outset.
+- **Make trade-offs explicit:** document options, constraints, rationale, consequences and review triggers.
 
-The following conceptual diagram is intentionally generic:
+## Conceptual hybrid reference architecture
+
+The diagram below is illustrative and uses generic components. It is not a depiction of an employer or customer environment.
 
 ```mermaid
 flowchart TB
@@ -33,56 +33,37 @@ flowchart TB
     BCP --> DR[Recovery environment]
 ```
 
-## Architecture principles
+## Architecture capabilities represented here
 
-1. **Secure by default:** least privilege, strong identity, segmentation and auditable administration.
-2. **Resilience by design:** identify failure domains, dependencies, recovery objectives and tested restoration paths.
-3. **Operate what is designed:** monitoring, alerting, support ownership, runbooks and lifecycle management are design requirements.
-4. **Document decisions:** record context, options, rationale, trade-offs and review triggers.
-5. **Automate repeatable work:** use version-controlled, reviewable configuration and tested automation where appropriate.
-
-## Suggested repository structure
-
-```text
-.
-├── README.md
-├── docs/
-│   ├── architecture-principles.md
-│   ├── adr-template.md
-│   ├── resilience-checklist.md
-│   └── operational-readiness.md
-├── diagrams/
-└── labs/
-```
-
-## Architecture decision record (ADR)
-
-For each significant design decision, record:
-
-| Field | Description |
-|---|---|
-| Status | Proposed, accepted, superseded or rejected |
-| Context | The problem, constraints and drivers |
-| Decision | The selected option |
-| Alternatives | Other options considered |
-| Consequences | Benefits, risks and trade-offs |
-| Review trigger | What would cause this decision to be revisited |
+- Enterprise infrastructure architecture and platform lifecycle
+- Hybrid infrastructure and cloud integration
+- High availability, backup, disaster recovery and business continuity
+- Identity, privileged access and security-by-design
+- Network segmentation, DNS, load balancing and connectivity
+- Monitoring, observability, capacity and operational readiness
+- Architecture governance, technical debt and lifecycle planning
 
 ## Published architecture artefacts
 
-- [Hybrid infrastructure reference architecture](docs/HYBRID-REFERENCE-ARCHITECTURE.md)
-- [Architecture decision record template](docs/ADR-TEMPLATE.md)
-- [Resilience and disaster recovery checklist](docs/RESILIENCE-AND-DR-CHECKLIST.md)
-- [Operational readiness assessment](docs/OPERATIONAL-READINESS-ASSESSMENT.md)
+| Artefact | Why it matters |
+|---|---|
+| [Hybrid infrastructure reference architecture](docs/HYBRID-REFERENCE-ARCHITECTURE.md) | Shows a structured way to describe a hybrid target state and its key design domains |
+| [Architecture decision record template](docs/ADR-TEMPLATE.md) | Captures context, options, rationale, trade-offs and consequences |
+| [Resilience and disaster recovery checklist](docs/RESILIENCE-AND-DR-CHECKLIST.md) | Connects availability design with recovery and operational validation |
+| [Operational readiness assessment](docs/OPERATIONAL-READINESS-ASSESSMENT.md) | Checks whether a solution can be supported after implementation |
+| [Synthetic capacity-planning example](docs/SYNTHETIC-CAPACITY-PLANNING.md) | Demonstrates a planning method using illustrative data |
 
-## Roadmap
+## How I approach an architecture decision
 
-- [x] Publish architecture principles and an ADR template
-- [x] Add a hybrid infrastructure reference design
-- [x] Add a resilience and disaster-recovery checklist
-- [x] Add an operational-readiness assessment
-- [x] Add a synthetic infrastructure capacity-planning example
+| Step | Key question |
+|---|---|
+| Context | What business service, constraints and dependencies are in scope? |
+| Options | Which viable patterns meet the functional and non-functional needs? |
+| Decision | Why is the selected option appropriate? |
+| Consequences | What are the operational, security, cost and lifecycle trade-offs? |
+| Validation | How will the design be tested and accepted? |
+| Review | What change would trigger reassessment? |
 
-- [Synthetic capacity-planning example](docs/SYNTHETIC-CAPACITY-PLANNING.md)
+## Scope and responsible publication
 
-All examples are conceptual and synthetic. Validate designs against business requirements, vendor documentation and security governance before real-world use.
+All diagrams, sample records and examples in this repository are conceptual or synthetic. They are not customer deliverables, production configurations or evidence of a specific deployment. They are intended to demonstrate how I structure infrastructure architecture decisions and communicate technical considerations. Real designs must be validated against the actual business requirements, vendor documentation, security standards and operational governance.
